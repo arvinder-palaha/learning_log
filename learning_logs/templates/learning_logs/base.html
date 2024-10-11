@@ -1,6 +1,7 @@
 <p>
     {% comment %} The title is also a link (anchor) to index page {% endcomment %}
-    <a href="{% url 'learning_logs:index' %}">Learning Log</a>
+    <a href="{% url 'learning_logs:index' %}">Learning Log</a> - 
+    <a href="{% url 'learning_logs:topics' %}">Topics</a>
 </p>
 
 {% block content %}{% endblock content %}
