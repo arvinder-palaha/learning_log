@@ -31,4 +31,4 @@ def new_topic(request):
         
     # display a blank or invalid form
     context = {'form' : form}
-    return render(request, 'learning_logs/new_topics.html', context)
+    return render(request, 'learning_logs/new_topic.html', context)
