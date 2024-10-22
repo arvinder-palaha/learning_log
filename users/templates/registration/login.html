@@ -1,10 +1,11 @@
 {% extends "learning_logs/base.html" %}
 
-{% block context %}
+{% block content %}
 
     {% if form.errors %}
         <p>Your username and password didn't match. Please try again.</p>
     {% endif %}
+    <p>HELLO</p>
 
     <form method="post" action="{% url 'users:login' %}">
         {% csrf_token %}
@@ -15,4 +16,4 @@
             value="{% url 'learning_logs:index' %}" />
     </form>
 
-{% endblock context %}
+{% endblock content %}
