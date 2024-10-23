@@ -4,9 +4,9 @@
     <a href="{% url 'learning_logs:topics' %}">Topics</a>
     {% if user.is_authenticated %}
         Hello, {{ user.username }}.
-        <form action="{% url 'users:logout' %}" method="post">
+        <form method="post" action="{% url 'users:logout' %}" style="display: inline;">
             {% csrf_token %}
-            <button name="submit">Log out</button>
+            <input type="submit" value="Log out" style="background: none; border: none; color: blue; text-decoration: underline; cursor: pointer; padding: 0; font: inherit;">
         </form>
     {% else %}
         <a href="{% url 'users:register' %}">Register</a>
