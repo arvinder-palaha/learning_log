@@ -1,13 +1,7 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.views import LogoutView
-from django.urls import reverse_lazy
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 
-
-class CustomLogoutView(LogoutView):
-    next_page = reverse_lazy('learning_logs:index')
-    template_name = 'registration/logged_out.html'
 
 def register(request):
     if request.method != 'POST':
