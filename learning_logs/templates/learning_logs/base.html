@@ -37,9 +37,9 @@
                         </form>
                     </li>
                 {% else %}
-                    <li class="nav-item">
+                    {% comment %} <li class="nav-item">
                         <a href="{% url 'users:register' %}" class="nav-link">Register</a>
-                    </li>
+                    </li> {% endcomment %}
                     <li class="nav-item">
                         <a href="{% url 'users:login' %}" class="nav-link">Log in</a>
                     </li>
